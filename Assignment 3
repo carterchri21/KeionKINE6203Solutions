@@ -1,1 +1,164 @@
+%%%Function 1 : Write a function that takes a number as input and returns a 
+  %%%value that is 2 times the number as output.  
 
+%%This validates 2X the input as the output in the function.
+
+function [doubleValue] = Problem1(x) 
+   x = input('Input a random number')
+   doubleValue = x * 2 
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%Function 2: Write a function that takes 2 numbers as input and returns 
+%%values for the sum, difference, product, and max of the two numbers as 
+%outputs. 
+
+function [mySum,Diff,Product,max] = numVar(num1,num2)
+
+mySum = (num1 + num2);
+Diff = (num1 - num2); 
+Product = num1*num2; 
+if num > num2
+    max = num1 
+else
+            max = num2 
+end
+
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 3: Write a function that takes 2 numbers as inputs and returns
+%%% Woo if their sum is even and Hah if their sum is odd. 
+
+function [output] = EvenorOdd(numb1, numb2)
+% This function strictly determines which input is even or odd.
+numb = numb1 + numb2
+if rem(numb,2)== 0
+    output = 'Woo'
+else
+    output = 'Hah'
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 4: Write a function that takes in a number of quarters, dimes,
+%%% nickels, and pennies as inputs and returns the total amount as output. 
+
+function [totalcashamount] = myDough(quarters, nickels, dimes, pennies)
+
+% This function calculates the overall total amount of money from input of
+% change.
+
+quarters = quarters*.25;
+
+nickels = nickels*.05;
+
+dimes = dimes*.1;
+
+pennies = pennies*.01;
+
+totalcashamount = quarters+nickels+dimes+pennies;
+
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 5: Write a function that accepts a single 3-element array
+%%% (e.g. [3 4 5]), and returns a logical value (0 or 1) indicating if the
+%%% 3 elements of the array represent the siders of a valid triangle. 
+
+function [validTri] = validTri(triArray)
+
+%%% Accepts single array and returns logical value to 0 or 1. %%% 
+
+a = triArray(1,1);
+b = triArray(1,2);
+c = triArray(1,3);
+
+
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 6: Write a function that takes a number as input and returns true if the
+%%% number is a prime number and false if the number is not prime. %%%
+
+function [primeDetermine] = primeNumb(inputNumb)
+
+% This function is to decide whether or not the number is or is not a prime
+% number % 
+
+primeDetermine = isprime(inputNumb);
+if primeDetermine == 1
+    disp('Prime')
+else
+    disp('Not Prime')
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 7: Write a function that takes two vectors and plots their
+%%% values of a figure. This function set up the figure with titles for the
+%%% chart and each axis (can be generic names). 
+
+function [graph] = plotting(x,y)
+
+%%two vectors will plot values on a certain figure. Will include title and 
+%%other labeled distinctions to fully describe and validate the function.&& 
+
+graph = plot(x,y)
+title('My Wonderful Function')
+xlabel('x')
+ylabel('y')
+grid('on') 
+legend('Vector Numero Uno', 'Vector Numero Dos') 
+
+
+end 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 8: Write a function that takes 2 numbers as inputs and
+%%% displays a counter lower number to higher number. %%% 
+
+function counter = expectedOutputs(a,b)
+
+%%display a counter from the lower number to the higher number.
+
+if a < b 
+    counter = a:b;
+elseif b < a
+    counter = b:a; 
+else 
+    counter = [a b]; 
+    
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 9: Write a function that takes a string value as input and
+%%% returns the length of the string and the first and last character as
+%%% outputs. 
+
+function [beginVariable, firstVariable, lastVariable] = wordSolution(word)
+
+%%takes string values as inpur and returns lenth of the string
+
+beginVariable = strlength(word) 
+firstVariable = word(1) 
+lastVariable = word(ending)
+
+end 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Function 10: Write a function that does not take any input and displays
+%%% "Thank goodness this assignment is over" when called
+
+function (outputMessage) = finalAnswer 
+
+%%display "Thank goodness this assignment is over" 
+
+disp('Thank goodness this assignment is over') 
