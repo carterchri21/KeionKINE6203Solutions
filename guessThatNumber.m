@@ -21,7 +21,7 @@ function guessThatNumber()  % *** WARNING: CONTAINS INTENTIONAL BUGS! ***
 %
 %---------------------------------------------------------------
 
-beginner = 1;               % beginner level #
+beginner = 1;               % beginner level #  
 moderate = 2;               % moderate level #
 advanced = 3;               % advanced level #
 beginnerHighest = 10;       % highest possible number for beginner
@@ -46,8 +46,8 @@ fprintf('   3) Advanced (range is 1 to %d)\n', advancedHighest)
 level = input('Enter level (1-3): '); 
 
 while level ~= beginner && level && moderate && level ~= advanced     
-    %%% Bug #1 has been identified. Coding was set to an 'or' and shows
-    %%% that it will not properly run without correct output. Changing to
+    %%% Bug #1 has been identified by running the code until an error was shown in the command window.
+    %%% Coding was set to an 'or' and shows that it will not properly run without correct output. Changing to
     %%% an "and" fix and the code runs great. From "||" to "&&" changes the 
     %%% modification for better running of the code.
     
@@ -73,14 +73,14 @@ highest = moderateHighest;
 
 else
 highest = advancedHighest; 
-%%% Bug #3 has been identified. The h in advancedhighest was NOT capitlized
+%%% Bug #3 has been identified by skimming over coding. The h in advancedhighest was NOT capitlized
 %%% which could knock off the function completely. Simple but big mistake.
 end
 
 % randomly select secret number between 1 and highest for level of play
 
 secretNumber = randi(highest,1);   
-%%% Bug #4 has been identified. This function at first was only stated to
+%%% Bug #4 has been identified while running the code. This function at first was only stated to
 %%% choose the largest number for the levels, so changing the function the
 %%% way I did was to show and get different numbers. Using function
 %%% 'randi'. 
@@ -88,9 +88,9 @@ secretNumber = randi(highest,1);
 % initialize number of guesses and User_guess
 
 numOfTries = 0; 
-%%% Bug #5 has been identified. Had to change the variable numofTries = 1;
+%%% Bug #5 has been identified by running the values. Had to change the variable numofTries = 1;
 %%% to numofTries = 0;. This is because it is displaying one extra number
-%%% higher than it should be at, leaving it inaccurate. 
+%%% higher than it should be at, leaving it inaccurate, because of it being set at 1.  
 userGuess = 0;
 
 % repeatedly get user's guess until the user guesses correctly
@@ -102,7 +102,7 @@ while userGuess ~= secretNumber
 fprintf('\nEnter a guess (1-%d): ', highest);
 userGuess = input('');
 while userGuess < 1 || userGuess > highest
-%%% Bug #6 has been identified. The code was written as userGuess >=
+%%% Bug #6 has been identified while running the code and playing the game. The code was written as userGuess >=
 %%% highest. The ">=' alone sets the standard to where it doesnt allow the
 %%% user to actually guess the highest value in the coding.
 
@@ -119,7 +119,7 @@ numOfTries = numOfTries + 1;
 % report whether the user's guess was high, low, or correct
 
 if userGuess < secretNumber
-%%% Bug #7 has been identified. The code suggested the '>' which will only
+%%% Bug #7 has been identified while playing the game, stating the guess is too low . The code suggested the '>' which will only
 %%% show the highest value. So changing the code to '<' will let us display
 %%% a lower value if needed to be more accurate and not stuck to one value.
 
@@ -131,12 +131,12 @@ fprintf('\nLucky You!  You got it on your first try!\n\n');
 else
 fprintf('\nCongratulations!  You got %d in %d tries.\n\n', ...
 secretNumber,numOfTries);
-%%% Bug #8 has been identified. The end of the function forgot to add the
+%%% Bug #8 has been identified while inital running of code began. The end of the function forgot to add the
 %%% variable numOfTries, which will make it hard to drag and display the
 %%% value.
 
 end 
-%%% Bug #9 has been identified. There was no 'end' here at the end of the
+%%% Bug #9 has been identified  by error. There was no 'end' here at the end of the
 %%% if condition. Must add 'end' or the loop will never fully run
 %%% correctly. 
 
@@ -146,7 +146,7 @@ end  % of guessing while loop
 
 fprintf('Game Over. Thanks for playing the Guess That Number game.\n\n');
 
-%%% Bug #10 has been identified. The end of the guessing while loop was
+%%% Bug #10 has been identified by error message stating a missing END. The end of the guessing while loop was
 %%% stuck inside of the loop which could continue displaying every moment a
 %%% player actually began guessing a value in the game. So, we move the
 %%% fucntion fprintf('Game Over. Thanks for playing the Guess That Number
